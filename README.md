@@ -54,9 +54,8 @@ This project focuses on applying core **Front-End Development** concepts:
 
 This repository showcases the skills I learned from the freeCodeCamp course. For my **actual professional work and portfolio**, please visit the links below:
 
-* **My Real Portfolio:** [**Insert Link to Your Real Portfolio Here**] 
-* **LinkedIn:** [Your LinkedIn Profile URL]
-* **GitHub:** [Your GitHub Profile URL]
+* **LinkedIn:** https://www.linkedin.com/in/alif-aryaputra-aswangga-987a392a4/
+* **GitHub:** https://github.com/alifaryaputraaswanggax
 
 ---
 
