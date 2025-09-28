@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Inter, sans-serif;
+  padding-top: 70px;
+}
+
+#header-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  /* Fixed Header*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#img-header-nav{
+  width: 40px;
+  height: 39px;
+  max-width: 100%;
+  margin-left: 80px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#navbar{
+  width: 65%;
+}
+
+#nav-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+#navbar li a{
+  text-decoration: none;
+  width: 56px;
+  height: 24px;
+  padding: 5px 10px;
+  color: black;
+  display: block;
+}
+
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-image: url(https://i.redd.it/cigarettes-after-sex-desktop-wallpapers-hd-v0-mwkvciep25yb1.png?width=1920&format=png&auto=webp&s=bca5b25aa04165c9815b299f81e3c15a7289fa0f);
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.welcome-section > p{
+  font-size: 1rem;
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.projects-section{
+  text-align: center;
+  padding: 3rem;
+  background-color: #303030;
+  color: white; 
+}
+
+.projects-section-header{
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* KUNCI: GRID LAYOUT (membuat item berjejer ke samping) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.project-image{
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile{
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.project-tile:hover {
+    transform: translateY(-8px); /* Efek hover: kartu terangkat */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn-show-all{
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 10px 20px;
+}
+
+.btn-show-all:hover{
+   background-color: #1e1e1e;
+   color: white;
+  transform: scale(1.05);
+}
+
+.contact-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/560d66e0e4b02ef113036578/1570207511263-58RARV1FFSOCKZE7VML8/191004-kirby-gladstein-photography-cigarettes-after-sex-wiltern-la-00532.jpg);
+  background-position: center;
+}
+
+.contact-section-header{
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-section-header > p{
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.contact-links{
+  font-size: 1.5rem;
+  margin-top: 20px;
+  display: flex;
+  gap: 95px;
+  justify-content: center;
+ transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-5px);
+}
+
+#profile-link{
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 4px 4px;
+}
+
+.footers{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+/* --- MEDIA QUERY: Layar Kecil (Mobile) --- */
+@media (max-width: 600px) {
+    
+    /* 1. Navbar: Tumpuk Vertikal di Tengah */
+    #header-nav {
+        /* Hapus space-between, atur logo & nav di tengah */
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+    }
+
+    /* Sembunyikan Logo (opsional, jika ingin menghemat ruang) */
+    #img-header-nav {
+        display: none; 
+    }
+
+    /* Tumpuk Tautan Navigasi Vertikal */
+    #nav-list {
+        flex-direction: column; /* Tumpuk item satu di bawah yang lain */
+        gap: 5px; /* Kurangi jarak antar link */
+        padding: 5px 0;
+        text-align: center;
+    }
+    
+    /* 2. Contact Links: Tumpuk Vertikal */
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 1.2rem;
+    }
+
+    /* 3. Welcome Section: Kurangi Tinggi */
+    #welcome-section {
+        height: 60vh;
+    }
+
+    /* 4. Projects Grid: Hanya 1 Kolom */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Paksa hanya 1 kolom untuk proyek */
+    }
+}
